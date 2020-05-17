@@ -1,0 +1,13 @@
+services:
+  PhpCsFixer\Fixer\Strict\DeclareStrictTypesFixer: ~
+  PhpCsFixer\Fixer\PhpUnit\PhpUnitDedicateAssertFixer: ~
+  Symplify\CodingStandard\Fixer\LineLength\LineLengthFixer:
+    lineLength: 150
+
+
+parameters:
+  exclude_files:
+    - vendor/*
+  sets:
+    - 'php-codesniffer-psr2'
+    - 'php71'

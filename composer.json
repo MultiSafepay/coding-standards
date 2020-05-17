@@ -1,0 +1,16 @@
+{
+    "name": "multisafepay/coding-standards",
+    "description": "The coding standard currently used within MultiSafepay plugin projects",
+    "type": "library",
+    "license": "MIT",
+    "require": {
+        "php": "^5.6 || ^7.0",
+        "symplify/easy-coding-standard": "^7.3"
+    },
+    "authors": [{
+        "name": "MultiSafepay",
+        "email": "integration@multisafepay.com",
+        "homepage": "https://www.multisafepay.com",
+        "role": "Developer"
+    }]
+}
