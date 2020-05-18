@@ -3,6 +3,7 @@ services:
   PhpCsFixer\Fixer\PhpUnit\PhpUnitDedicateAssertFixer: ~
   Symplify\CodingStandard\Fixer\LineLength\LineLengthFixer:
     lineLength: 150
+  PHP_CodeSniffer\Standards\Squiz\Sniffs\Commenting\FunctionCommentSniff: ~
 
 
 parameters:
@@ -11,3 +12,4 @@ parameters:
   sets:
     - 'php-codesniffer-psr2'
     - 'php71'
+    - 'docblock'
