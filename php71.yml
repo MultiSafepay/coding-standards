@@ -3,13 +3,15 @@ services:
   PhpCsFixer\Fixer\PhpUnit\PhpUnitDedicateAssertFixer: ~
   Symplify\CodingStandard\Fixer\LineLength\LineLengthFixer:
     lineLength: 150
+  PhpCsFixer\Fixer\Phpdoc\PhpdocTrimConsecutiveBlankLineSeparationFixer: ~
+  PhpCsFixer\Fixer\Phpdoc\PhpdocTypesFixer: ~
+  PhpCsFixer\Fixer\Phpdoc\PhpdocAddMissingParamAnnotationFixer: ~
   PHP_CodeSniffer\Standards\Squiz\Sniffs\Commenting\FunctionCommentSniff: ~
-
-
 parameters:
+  skip:
+    PHP_CodeSniffer\Standards\Squiz\Sniffs\Commenting\FunctionCommentSniff.MissingReturn: ~
   exclude_files:
     - vendor/*
   sets:
     - 'php-codesniffer-psr2'
     - 'php71'
-    - 'docblock'
