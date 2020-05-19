@@ -18,7 +18,7 @@ composer require multisafepay/coding-standards --dev
 
 ## Usage
 The best way to use the MultiSafepay coding standard is to use composer scripts. 
-You can choose from Multiple PHP versions.
+You can choose from multiple PHP versions.
 
 ```json
 {
@@ -29,7 +29,7 @@ You can choose from Multiple PHP versions.
 }
 ```
 
-### Ovewriting data
+### Overwriting data
 *_todo_*
 
 ## Sets that we support
