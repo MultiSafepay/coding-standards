@@ -1,15 +1,37 @@
 services:
+  #   Add declare strict on top off all php files (PHP >= 7.0)
   PhpCsFixer\Fixer\Strict\DeclareStrictTypesFixer: ~
-  PhpCsFixer\Fixer\PhpUnit\PhpUnitDedicateAssertFixer: ~
+  # Set max line length to 150 characters
   Symplify\CodingStandard\Fixer\LineLength\LineLengthFixer:
     lineLength: 150
-  PhpCsFixer\Fixer\Phpdoc\PhpdocTrimConsecutiveBlankLineSeparationFixer: ~
+  # Fix doc comment incorrect types (arrAY => array)
   PhpCsFixer\Fixer\Phpdoc\PhpdocTypesFixer: ~
-  PhpCsFixer\Fixer\Phpdoc\PhpdocAddMissingParamAnnotationFixer: ~
+  #   Add doc comments with params, throws and returns
   PHP_CodeSniffer\Standards\Squiz\Sniffs\Commenting\FunctionCommentSniff: ~
+  # $value == 5;   =>   $value === 5;
+  PhpCsFixer\Fixer\Strict\StrictComparisonFixer: ~
+  # is_null($value);   =>   $value === null;
+  PhpCsFixer\Fixer\LanguageConstruct\IsNullFixer:
+    use_yoda_style: false
+  # in_array('key', $value)   =>   in_array('key', $value, true)
+  PhpCsFixer\Fixer\Strict\StrictParamFixer: ~
+  # array(    ) => [];
+  PhpCsFixer\Fixer\ArrayNotation\ArraySyntaxFixer:
+    syntax: short
+  # [1,2]; => [1, 2];
+  PhpCsFixer\Fixer\ArrayNotation\WhitespaceAfterCommaInArrayFixer: ~
+  # @param $array array => @param array $array
+  Symplify\CodingStandard\Fixer\Commenting\ParamReturnAndVarTagMalformsFixer: ~
+  # echo "hi";;   →   echo "hi";
+  SlevomatCodingStandard\Sniffs\PHP\UselessSemicolonSniff: ~
+  # Removed unused imports
+  PhpCsFixer\Fixer\Import\OrderedImportsFixer: ~
+  # Sort imports
+  PhpCsFixer\Fixer\Import\NoUnusedImportsFixer: ~
+
 parameters:
   skip:
-    PHP_CodeSniffer\Standards\Squiz\Sniffs\Commenting\FunctionCommentSniff.MissingReturn: ~
+    PHP_CodeSniffer\Standards\Squiz\Sniffs\Commenting\FunctionCommentSniff.MissingParamComment: ~
   exclude_files:
     - vendor/*
   sets:
