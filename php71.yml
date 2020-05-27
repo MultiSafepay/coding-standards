@@ -25,13 +25,19 @@ services:
   # echo "hi";;   →   echo "hi";
   SlevomatCodingStandard\Sniffs\PHP\UselessSemicolonSniff: ~
   # Removed unused imports
-  PhpCsFixer\Fixer\Import\OrderedImportsFixer: ~
-  # Sort imports
   PhpCsFixer\Fixer\Import\NoUnusedImportsFixer: ~
+  # Sort imports
+  PhpCsFixer\Fixer\Import\OrderedImportsFixer: ~
 
 parameters:
   skip:
+    # Remove check for @param comment
     PHP_CodeSniffer\Standards\Squiz\Sniffs\Commenting\FunctionCommentSniff.MissingParamComment: ~
+    # Remove check for @param and @throws comment should end with a punctuation
+    PHP_CodeSniffer\Standards\Squiz\Sniffs\Commenting\FunctionCommentSniff.ParamCommentFullStop: ~
+    PHP_CodeSniffer\Standards\Squiz\Sniffs\Commenting\FunctionCommentSniff.ThrowsNoFullStop: ~
+    # Remove check that @throws tag comment should start with a capital
+    PHP_CodeSniffer\Standards\Squiz\Sniffs\Commenting\FunctionCommentSniff.ThrowsNotCapital: ~
   exclude_files:
     - vendor/*
   sets:
