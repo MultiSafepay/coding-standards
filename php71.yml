@@ -38,6 +38,8 @@ parameters:
     PHP_CodeSniffer\Standards\Squiz\Sniffs\Commenting\FunctionCommentSniff.ThrowsNoFullStop: ~
     # Remove check that @throws tag comment should start with a capital
     PHP_CodeSniffer\Standards\Squiz\Sniffs\Commenting\FunctionCommentSniff.ThrowsNotCapital: ~
+    # Remove comment for @throws tag
+    PHP_CodeSniffer\Standards\Squiz\Sniffs\Commenting\FunctionCommentSniff.EmptyThrows: ~
   exclude_files:
     - vendor/*
   sets:
