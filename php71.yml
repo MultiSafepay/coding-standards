@@ -1,5 +1,5 @@
 services:
-  #   Add declare strict on top off all php files (PHP >= 7.0)
+  # Add declare strict on top off all php files (PHP >= 7.0)
   PhpCsFixer\Fixer\Strict\DeclareStrictTypesFixer: ~
   # Set max line length to 150 characters
   Symplify\CodingStandard\Fixer\LineLength\LineLengthFixer:
@@ -28,6 +28,11 @@ services:
   PhpCsFixer\Fixer\Import\NoUnusedImportsFixer: ~
   # Sort imports
   PhpCsFixer\Fixer\Import\OrderedImportsFixer: ~
+  # Only X indentation level per function/method
+  ObjectCalisthenics\Sniffs\Metrics\MaxNestingLevelSniff:
+    maxNestingLevel: 2
+  # no "else"
+  ObjectCalisthenics\Sniffs\ControlStructures\NoElseSniff: ~
 
 parameters:
   skip:

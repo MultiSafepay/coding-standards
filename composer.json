@@ -5,7 +5,8 @@
     "license": "MIT",
     "require": {
         "php": "^5.6 || ^7.0",
-        "symplify/easy-coding-standard": "^7.3"
+        "symplify/easy-coding-standard": "^7.3",
+        "object-calisthenics/phpcs-calisthenics-rules": "^3.7"
     },
     "authors": [{
         "name": "MultiSafepay",
