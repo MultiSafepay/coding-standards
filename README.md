@@ -30,7 +30,13 @@ You can choose from multiple PHP versions.
 ```
 
 ### Overwriting data
-*_todo_*
+You can overwrite the MultiSafepay coding standard if they conflict with the ecommerce platform. You can import the MultiSafepay coding standard and add, edit or remove certain checks
+
+Create ecs.yml in the root of your project
+```yaml
+imports:
+  - { resource: './vendor/multisafepay/coding-standards/php71.yml', ignore_errors: not_found }
+```
 
 ## Sets that we support
 * PHP 5.6*
