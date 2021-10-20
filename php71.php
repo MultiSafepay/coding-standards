@@ -49,7 +49,6 @@ return static function (ContainerConfigurator $containerConfigurator): void {
     $services->set(\PhpCsFixer\Fixer\ControlStructure\YodaStyleFixer::class)->call('configure', [['equal' => \false, 'identical' => \false, 'less_and_greater' => \false]]);;
     $services->set(\PhpCsFixer\Fixer\StringNotation\SingleQuoteFixer::class);
     $services->set(\PhpCsFixer\Fixer\Semicolon\SpaceAfterSemicolonFixer::class);
-    $services->set(\PhpCsFixer\Fixer\ClassNotation\FinalClassFixer::class);
     $services->set(\PhpCsFixer\Fixer\ClassNotation\ProtectedToPrivateFixer::class);
     $services->set(\PhpCsFixer\Fixer\ClassNotation\OrderedClassElementsFixer::class);
     $services->set(\SlevomatCodingStandard\Sniffs\PHP\UselessSemicolonSniff::class);
