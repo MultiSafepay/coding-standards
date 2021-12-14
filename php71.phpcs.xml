@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<ruleset name="MultiSafepay">
+    <rule ref="./general/ruleset.xml"/>
+    <config name="testVersion" value="5.6-"/>
+</ruleset>

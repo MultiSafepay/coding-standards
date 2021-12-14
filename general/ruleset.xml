@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<ruleset name="MultiSafepay">
+    <rule ref="Generic.Files.LineEndings">
+        <properties>
+            <property name="eolChar" value="\n"/>
+        </properties>
+    </rule>
+    <rule ref="Generic.PHP.DeprecatedFunctions"/>
+    <rule ref="Generic.PHP.DisallowShortOpenTag"/>
+    <rule ref="Generic.Arrays.DisallowLongArraySyntax"/>
+    <rule ref="Generic.Classes.DuplicateClassName"/>
+    <rule ref="Generic.Files.LineEndings"/>
+    <rule ref="PSR2.Files.EndFileNewLine"/>
+    <rule ref="Generic.WhiteSpace.DisallowTabIndent"/>
+
+    <!-- The general style rules for control structures are as follows:
+     There MUST be one space after the control structure keyword
+     There MUST NOT be a space after the opening parenthesis
+     There MUST NOT be a space before the closing parenthesis
+     There MUST be one space between the closing parenthesis and the opening brace
+     The structure body MUST be indented once
+     The closing brace MUST be on the next line after the body -->
+    <rule ref="Squiz.ControlStructures.ControlSignature"/>
+    <rule ref="Squiz.WhiteSpace.ControlStructureSpacing.SpacingAfterOpen"/>
+    <rule ref="Squiz.WhiteSpace.ControlStructureSpacing.SpacingBeforeClose"/>
+    <rule ref="Squiz.WhiteSpace.ScopeClosingBrace"/>
+    <rule ref="Squiz.ControlStructures.ForEachLoopDeclaration"/>
+    <rule ref="Squiz.ControlStructures.ForLoopDeclaration"/>
+    <rule ref="Squiz.ControlStructures.ForLoopDeclaration.SpacingAfterOpen">
+        <severity>0</severity>
+    </rule>
+    <rule ref="Squiz.ControlStructures.ForLoopDeclaration.SpacingBeforeClose">
+        <severity>0</severity>
+    </rule>
+    <rule ref="Squiz.ControlStructures.LowercaseDeclaration"/>
+
+    <!-- Visibility MUST be declared on all methods. -->
+    <rule ref="Squiz.Scope.MethodScope"/>
+    <rule ref="Squiz.WhiteSpace.ScopeKeywordSpacing"/>
+
+    <!-- Argument lists MAY be split across multiple lines, where each subsequent line is indented once. When doing so, the first item in the list MUST be on the next line, and there MUST be only one argument per line. When the argument list is split across multiple lines, the closing parenthesis and opening brace MUST be placed together on their own line with one space between them. -->
+    <rule ref="Squiz.Functions.MultiLineFunctionDeclaration"/>
+
+    <!-- Method arguments with default values MUST go at the end of the argument list. -->
+    <rule ref="PEAR.Functions.ValidDefaultValue"/>
+
+    <!-- Method names MUST NOT be declared with a space after the method name. The opening brace MUST go on its own line, and the closing brace MUST go on the next line following the body. There MUST NOT be a space after the opening parenthesis, and there MUST NOT be a space before the closing parenthesis. -->
+    <!-- checked by PSR2.Methods.FunctionClosingBrace -->
+    <rule ref="Squiz.Functions.FunctionDeclaration"/>
+    <rule ref="Squiz.Functions.LowercaseFunctionKeywords"/>
+
+    <!-- PHP keywords MUST be in lower case. -->
+    <rule ref="Generic.PHP.LowerCaseKeyword"/>
+
+    <!-- When making a method or function call, there MUST NOT be a space between the method or function name and the opening parenthesis, there MUST NOT be a space after the opening parenthesis, and there MUST NOT be a space before the closing parenthesis. In the argument list, there MUST NOT be a space before each comma, and there MUST be one space after each comma.
+Argument lists MAY be split across multiple lines, where each subsequent line is indented once. When doing so, the first item in the list MUST be on the next line, and there MUST be only one argument per line. -->
+    <rule ref="Generic.Functions.FunctionCallArgumentSpacing"/>
+    <rule ref="PSR2.Methods.FunctionCallSignature.SpaceAfterCloseBracket">
+        <severity>0</severity>
+    </rule>
+    <rule ref="PSR2.Methods.FunctionCallSignature.OpeningIndent">
+        <severity>0</severity>
+    </rule>
+
+    <!-- The PHP constants true, false, and null MUST be in lower case. -->
+    <rule ref="Generic.PHP.LowerCaseConstant"/>
+    <rule ref="PHPCompatibility"/>
+    <rule ref="SlevomatCodingStandard.ControlStructures.AssignmentInCondition"/>
+    <rule ref="SlevomatCodingStandard.PHP.UselessSemicolon"/>
+    <rule ref="SlevomatCodingStandard.Namespaces.AlphabeticallySortedUses"/>
+    <rule ref="SlevomatCodingStandard.Classes.ClassConstantVisibility"/>
+    <rule ref="SlevomatCodingStandard.TypeHints.ReturnTypeHintSpacing"/>
+    <rule ref="SlevomatCodingStandard.Namespaces.MultipleUsesPerLine"/>
+    <rule ref="SlevomatCodingStandard.Namespaces.UseDoesNotStartWithBackslash"/>
+    <rule ref="SlevomatCodingStandard.Variables.UnusedVariable"/>
+    <rule ref="SlevomatCodingStandard.Commenting.DeprecatedAnnotationDeclaration"/>
+
+    <rule ref="SlevomatCodingStandard.TypeHints.DeclareStrictTypes">
+        <properties>
+            <property name="declareOnFirstLine" value="true"/>
+            <property name="spacesCountAroundEqualsSign" value="0"/>
+        </properties>
+    </rule>
+</ruleset>

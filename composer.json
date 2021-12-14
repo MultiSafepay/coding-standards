@@ -4,8 +4,10 @@
     "type": "library",
     "license": "MIT",
     "require": {
-        "symplify/easy-coding-standard": "^9.4",
-        "slevomat/coding-standard": "~7.0"
+        "squizlabs/php_codesniffer": "^3.6",
+        "dealerdirect/phpcodesniffer-composer-installer": "^0.7",
+        "slevomat/coding-standard": "^7.0",
+        "phpcompatibility/php-compatibility": "^9.3"
     },
     "authors": [{
         "name": "MultiSafepay",
