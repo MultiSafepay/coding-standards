@@ -39,7 +39,9 @@
     <rule ref="Squiz.WhiteSpace.ScopeKeywordSpacing"/>
 
     <!-- Argument lists MAY be split across multiple lines, where each subsequent line is indented once. When doing so, the first item in the list MUST be on the next line, and there MUST be only one argument per line. When the argument list is split across multiple lines, the closing parenthesis and opening brace MUST be placed together on their own line with one space between them. -->
-    <rule ref="Squiz.Functions.MultiLineFunctionDeclaration"/>
+    <rule ref="Squiz.Functions.MultiLineFunctionDeclaration">
+        <exclude-pattern>*.js</exclude-pattern>
+    </rule>
 
     <!-- Method arguments with default values MUST go at the end of the argument list. -->
     <rule ref="PEAR.Functions.ValidDefaultValue"/>
@@ -78,7 +80,9 @@ Argument lists MAY be split across multiple lines, where each subsequent line is
     <rule ref="SlevomatCodingStandard.TypeHints.DeclareStrictTypes">
         <properties>
             <property name="declareOnFirstLine" value="true"/>
-            <property name="spacesCountAroundEqualsSign" value="0"/>
+            <property name="spacesCountAroundEqualsSign" value="null"/>
+            <property name="linesCountBeforeDeclare" value="null"/>
+            <property name="linesCountAfterDeclare" value="null"/>
         </properties>
     </rule>
 </ruleset>
