@@ -6,5 +6,3 @@ services:
       context: .
     volumes:
     - './:/app'
-    entrypoint: 'vendor/bin/ecs --config=php71.php check sample.php'
-#    entrypoint: 'vendor/bin/ecs show --config=php71.php'
