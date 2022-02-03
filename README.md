@@ -23,8 +23,8 @@ You can choose from multiple PHP versions.
 ```json
 {
     "scripts": {
-        "code-sniffer": "@php vendor/bin/ecs check -c vendor/multisafepay/coding-standards/php71.yml src tests --clear-cache",
-        "fix-cs": "@code-sniffer --fix"
+        "code-sniffer": "@php vendor/bin/phpcs --standard=vendor/multisafepay/coding-standards/php71.phpcs.xml src",
+        "fix-cs": "@php @php vendor/bin/phpcbf --standard=vendor/multisafepay/coding-standards/php71.phpcs.xml src"
     }
 }
 ```
@@ -32,20 +32,18 @@ You can choose from multiple PHP versions.
 ### Overwriting data
 You can overwrite the MultiSafepay coding standard if they conflict with the ecommerce platform. You can import the MultiSafepay coding standard and add, edit or remove certain checks
 
-Create ecs.yml in the root of your project
-```yaml
-imports:
-  - { resource: './vendor/multisafepay/coding-standards/php71.yml', ignore_errors: not_found }
+Create phpcs.xml.dist in the root of your project
+```xml
+<?xml version="1.0"?>
+<ruleset name="MultiSafepay-Extended">
+    <rule ref="./vendor/multisafepay/coding-standards/php71.phpcs.xml"/>
+    <exclude ref="certain.rule"/>
+    
+    <!-- To add a max version to your project, change the value of testVersion to PHP_MIN_VERSION-PHP_MAX_VERSION -->
+    <config name="testVersion" value="7.1-"/>
+</ruleset>
+
 ```
-
-## Sets that we support
-* PHP 5.6
-* PHP 7.0*
-* PHP 7.1
-* Magento 2*
-* WooCommerce*
-
-\* Will be added soon
 
 ## Contributing
 Please open an issue first to discuss the changes you want to implement.
