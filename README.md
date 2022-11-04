@@ -13,7 +13,7 @@ Easily integrate the MultiSafepay plugin coding standards into the latest plugin
 ## Installation
 Use the package manager [composer](https://getcomposer.org/) to install the MultiSafepay coding standards for plugins.
 ```bash
-composer require multisafepay/coding-standards --dev
+composer require multisafepay/coding-standards:dev-master --dev
 ```
 
 ## Usage
